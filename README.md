@@ -105,19 +105,19 @@ AI 安全动态特征库：含 LLM 攻击链模式库
 
 
 
-主要代码执行逻辑如下：
 
-## <font style="color:rgb(51, 51, 51);">执行逻辑</font>
 
-<font style="color:rgb(51, 51, 51);">该代码实现了一个基于聊天记录的知识提取系统，主要通过以下步骤进行知识提取：</font>
+## 主要代码执行逻辑
 
-1. **<font style="color:rgb(51, 51, 51);">初始化</font>**<font style="color:rgb(51, 51, 51);">：创建 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">ChatKnowledgeExtractor</font>`<font style="color:rgb(51, 51, 51);"> 类的实例，加载配置文件和初始化相关组件（如分词器、LLM API 管理器等）。</font>
-2. **<font style="color:rgb(51, 51, 51);">处理聊天记录</font>**<font style="color:rgb(51, 51, 51);">：调用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">process</font>`<font style="color:rgb(51, 51, 51);"> 方法，传入聊天记录文本，进行以下处理：</font>
-   - **<font style="color:rgb(51, 51, 51);">解析聊天记录</font>**<font style="color:rgb(51, 51, 51);">：使用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">parse_chat_file</font>`<font style="color:rgb(51, 51, 51);"> 方法将聊天记录解析为结构化数据（消息列表）。</font>
-   - **<font style="color:rgb(51, 51, 51);">时序重建</font>**<font style="color:rgb(51, 51, 51);">：调用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">rebuild_timeline</font>`<font style="color:rgb(51, 51, 51);"> 方法，校正消息的时间戳，确保消息按时间顺序排列。</font>
-   - **<font style="color:rgb(51, 51, 51);">标签检测</font>**<font style="color:rgb(51, 51, 51);">：使用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">detect_tags</font>`<font style="color:rgb(51, 51, 51);"> 方法检测消息中的显式和隐式标签，提取专业术语和关键词。</font>
-   - **<font style="color:rgb(51, 51, 51);">语义增强</font>**<font style="color:rgb(51, 51, 51);">：调用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">semantic_enhancement</font>`<font style="color:rgb(51, 51, 51);"> 方法，使用语义模型增强消息的领域得分和知识评分。</font>
-   - **<font style="color:rgb(51, 51, 51);">跨会话关联</font>**<font style="color:rgb(51, 51, 51);">：使用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">cross_session_correlation</font>`<font style="color:rgb(51, 51, 51);"> 方法提取知识单元和潜在价值内容。</font>
-   - **<font style="color:rgb(51, 51, 51);">生成知识拓扑</font>**<font style="color:rgb(51, 51, 51);">：调用 </font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">generate_knowledge_topology</font>`<font style="color:rgb(51, 51, 51);"> 方法生成知识图谱报告。</font>
-3. **<font style="color:rgb(51, 51, 51);">输出报告</font>**<font style="color:rgb(51, 51, 51);">：将生成的知识图谱报告保存到指定的输出文件中。</font>
+该代码实现了一个基于聊天记录的知识提取系统，主要通过以下步骤进行知识提取：
+
+1. **初始化**：创建 `ChatKnowledgeExtracto` 类的实例，加载配置文件和初始化相关组件（如分词器、LLM API 管理器等）。
+2. **处理聊天记录**：调用 `process` 方法，传入聊天记录文本，进行以下处理：
+   - **解析聊天记录**：使用 `parse_chat_file` 方法将聊天记录解析为结构化数据（消息列表）。
+   - **时序重建**：调用 `rebuild_timeline` 方法，校正消息的时间戳，确保消息按时间顺序排列。
+   - **标签检测**：使用 `detect_tags` 方法检测消息中的显式和隐式标签，提取专业术语和关键词。
+   - **语义增强**：调用 `semantic_enhancement` 方法，使用语义模型增强消息的领域得分和知识评分。
+   - **跨会话关联**：使用 `cross_session_correlation` 方法提取知识单元和潜在价值内容。
+   - **生成知识拓扑**：调用 `generate_knowledge_topology` 方法生成知识图谱报告。
+3. **输出报告**：将生成的知识图谱报告保存到指定的输出文件中。
 
