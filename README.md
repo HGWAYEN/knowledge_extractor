@@ -91,13 +91,13 @@ AI 安全动态特征库：含 LLM 攻击链模式库
 
 也编写了web页面。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/42869913/1742443844050-65063a16-424d-4387-91b5-fe213a0c6d0b.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/42869913/1742445125934-38d0a447-039b-4fc4-8fb6-3297390fac09.png)
 
 
 
 “潜在知识讨论单元”展示
 
-![](https://cdn.nlark.com/yuque/0/2025/png/42869913/1742444305567-b3f85929-7ee0-4d8f-b81c-ddca80d84b50.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/42869913/1742445202420-d5c850b6-d736-464a-990e-91123b40cf77.png)
 
 
 
